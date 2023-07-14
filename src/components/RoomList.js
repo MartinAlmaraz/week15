@@ -24,15 +24,15 @@ export default function RoomList(props) {
 
     return (
         <Card.Body>
-            <h6>Rooms</h6>
-            {house.rooms.map((room, index) => {
-                <Room>
+            <h6>Rooms:</h6>
+            {house.rooms.map((room, index) => (
+                <Room
                     key={index}
                     room={room}
                     updateRoom={updateRoom}
                     deleteRoom={deleteRoom}
-                </Room>
-            })}
+                />
+            ))}
         </Card.Body>
     );
 }

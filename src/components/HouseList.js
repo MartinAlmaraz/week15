@@ -52,8 +52,8 @@ export default function HouseList() {
                     <h1>Houses</h1>
                 </div>
                 <div className='col-sm-8 d-flex flex-row-reverse'>
-                  <NewHouseForm 
-                    addHouse={addHouse} 
+                  <NewHouseForm
+                    addHouse={addHouse}
                     />
                 </div>
               </div>

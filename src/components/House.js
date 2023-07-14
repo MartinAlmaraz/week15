@@ -54,8 +54,8 @@ export default function House(props) {
                 </Card.Header>
                 <RoomList house={house} updateHouse={updateHouse}/>
                 <Card.Footer className="d-flex flex-row-reverse">
-                    <NewRoomForm adRoom={addRoom} />
-                </Card.Footer>
+                    <NewRoomForm addRoom={addRoom} />
+               </Card.Footer>
             </Card>
         </CardGroup>
     );

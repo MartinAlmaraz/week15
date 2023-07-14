@@ -3,7 +3,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function NewRoomForm(props) {
-    const { addRoom } = props;
+    const { addRoom }  = props;
+    console.log(props)
     const [name, setName] = useState("");
     const [area, setArea] = useState("");
 
@@ -33,12 +34,12 @@ export default function NewRoomForm(props) {
                             <h6>New Room</h6>
                         </div>
                         <div className="col-sm">
-                           <Form.Control>
+                           <Form.Control
                             type="text"
                             placeholder="Room Name"
                             onChange={(e) => setName(e.target.value)}
                             value={name}
-                           </Form.Control>
+                           />
                         </div>
                         <div className="col-sm">
                             <Form.Control type="text" placeholder="Sq. Ft." 
@@ -46,7 +47,7 @@ export default function NewRoomForm(props) {
                             value={area}
                             
 
-                            />
+                            ></Form.Control>
                         </div>
                         <div className="col-sm-1 mt-1 me-2">
                             <Button type="submit" className="btn-sm" title="Add room">

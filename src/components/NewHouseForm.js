@@ -4,11 +4,13 @@ import Form from 'react-bootstrap/Form';
 
 export default function NewHouseForm(props) {
     const { addHouse } = props;
+console.log(props)
     const [name, setName] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (name) {
+            console.log(name)
             addHouse({name});
             setName("");
         } else {
@@ -25,12 +27,12 @@ export default function NewHouseForm(props) {
                             <h5>New House</h5>
                         </div>
                         <div className='col-sm'>
-                            <Form.Control>
+                            <Form.Control
                                type="text"
                                placeholder="House Name"
                                onChange={(e) => setName(e.target.value)}
                                value={name}
-                            </Form.Control>
+                            />
                         </div>
                         <div className='col-sm-1 my-1'>
                             <Button type="submit" className='btn-sm' title="Add a new house">
@@ -42,4 +44,6 @@ export default function NewHouseForm(props) {
             </Form.Group>
         </Form>
     );
+
+  
 }

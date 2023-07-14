@@ -22,6 +22,7 @@ class HousesApi {
                 body: JSON.stringify(house),
             });
             return await resp.json();
+        
         } catch (e) {
             console.log("Error occured in HousesApi put", e);
         }
@@ -32,7 +33,7 @@ class HousesApi {
             const resp = await fetch(`${HOUSES_ENDPOINT}`, {
                 method: "POST",
                 headers: {
-                    "Contnent-Type": "application/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(house),
             });
@@ -52,6 +53,7 @@ class HousesApi {
                 
             });
             return await resp.json();
+        
         } catch (e) {
             console.log("Error occurd in HousesApi delete method.", e);
         }
